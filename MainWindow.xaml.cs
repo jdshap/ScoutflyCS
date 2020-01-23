@@ -47,16 +47,43 @@ namespace SFcustom
     {
         static String path = "";
         static byte[] raw;
-        public ObservableCollection<Xceed.Wpf.Toolkit.ColorItem>  ColorList;
+        public static ObservableCollection<Xceed.Wpf.Toolkit.ColorItem> ColorList;
 
         public MainWindow()
         {
             DataContext = this;
             InitializeComponent();
+
+            PrepareColorPicker();
+
             OpacitySlider.ValueChanged += new RoutedPropertyChangedEventHandler<double>(OpacitySlider_ValueChanged);
             OpacityBox.TextChanged += new TextChangedEventHandler(OpacityBox_TextChanged);
             LoadFile.Click += new RoutedEventHandler(LoadFile_Click);
             SaveFile.Click += new RoutedEventHandler(SaveFile_Click);
+        }
+
+        private void PrepareColorPicker()
+        {
+            ColorList = new ObservableCollection<Xceed.Wpf.Toolkit.ColorItem>();
+            ColorList.Add(new ColorItem(Color.FromRgb(127, 182, 75), "Normal Green"));
+            ColorList.Add(new ColorItem(Color.FromRgb(98, 134, 255), "Elder Blue"));
+            ColorList.Add(new ColorItem(Color.FromRgb(169, 118, 220), "Tempered Purple"));
+            ColorList.Add(new ColorItem(Color.FromRgb(237, 125, 51), "AT Orange"));
+            ColorList.Add(new ColorItem(Color.FromRgb(155, 81, 56), "Startled Red"));
+
+            Style style = new Style(typeof(ColorPicker));
+            style.Setters.Add(new Setter(ColorPicker.MarginProperty, new Thickness(20)));
+            style.Setters.Add(new Setter(ColorPicker.ShowStandardColorsProperty, true));
+            style.Setters.Add(new Setter(ColorPicker.ShowRecentColorsProperty, false));
+            style.Setters.Add(new Setter(ColorPicker.ShowAvailableColorsProperty, false));
+
+            style.Setters.Add(new Setter(ColorPicker.StandardTabHeaderProperty, "Defaults"));
+            style.Setters.Add(new Setter(ColorPicker.AdvancedTabHeaderProperty, "Custom"));
+
+            style.Setters.Add(new Setter(ColorPicker.ShowDropDownButtonProperty, false));
+
+            style.Setters.Add(new Setter(ColorPicker.StandardColorsProperty, ColorList));
+            Resources.Add(typeof(ColorPicker), style);
         }
 
         private void LoadFile_Click(object sender, RoutedEventArgs e)

@@ -11,15 +11,6 @@
         Title="Scoutfly Customization Tool" Height="500" Width="900">
 
     <Window.Resources>
-        <Style TargetType="xctk:ColorPicker">
-            <Setter Property="Margin" Value="20" />
-            <Setter Property="ShowStandardColors" Value="true" />
-            <Setter Property="ShowRecentColors" Value="false" />
-            <Setter Property="ShowAvailableColors" Value="false" />
-            <Setter Property="StandardColorsHeader" Value="Defaults" />
-            <Setter Property="AdvancedTabHeader" Value="Custom" />
-            <Setter Property="StandardColors" Value="{Binding ColorList}" />
-        </Style>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="15" />
             <Setter Property="VerticalAlignment" Value="Center" />
@@ -73,26 +64,26 @@
             <TextBlock Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"
                        Text="Tracks" />
 
-            <xctk:ColorPicker Grid.Row="1" Grid.Column="0" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorNormal" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
-            <xctk:ColorPicker Grid.Row="1" Grid.Column="1" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorNormalTrack" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="1" Grid.Column="0" Width="60"
+                Name="ColorNormal" />
+            <xctk:ColorPicker Grid.Row="1" Grid.Column="1" Width="60"
+                Name="ColorNormalTrack" />
             <TextBlock Grid.Row="1" Grid.Column="2" Text="Normal Tracking" />
 
-            <xctk:ColorPicker Grid.Row="2" Grid.Column="0" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorElder" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
-            <xctk:ColorPicker Grid.Row="2" Grid.Column="1" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorElderTrack" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="2" Grid.Column="0" Width="60"
+                Name="ColorElder" />
+            <xctk:ColorPicker Grid.Row="2" Grid.Column="1" Width="60"
+                Name="ColorElderTrack" />
             <TextBlock Grid.Row="2" Grid.Column="2" Text="Elder Tracking" />
 
-            <xctk:ColorPicker Grid.Row="3" Grid.Column="0" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorTemper" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
-            <xctk:ColorPicker Grid.Row="3" Grid.Column="1" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorTemperTrack" ColorMode="ColorCanvas" ShowStandardColors="False" ShowTabHeaders="False" ShowDropDownButton="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="3" Grid.Column="0" Width="60"
+                Name="ColorTemper" />
+            <xctk:ColorPicker Grid.Row="3" Grid.Column="1" Width="60"
+                Name="ColorTemperTrack"/>
             <TextBlock Grid.Row="3" Grid.Column="2" Text="Tempered Tracking" />
 
-            <xctk:ColorPicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorAlert" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="60"
+                Name="ColorAlert"/>
             <TextBlock Grid.Row="4" Grid.Column="2" Text="Scoutflies Startled" />
 
             <Slider Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
@@ -126,16 +117,16 @@
             <TextBlock Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center"
                        Text="Tracks"/>
 
-            <xctk:ColorPicker Grid.Row="2" Grid.Column="0" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorHFRNormal" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
-            <xctk:ColorPicker Grid.Row="2" Grid.Column="1" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorHFRNormalTrack" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="2" Grid.Column="0" Width="60"
+                Name="ColorHFRNormal" />
+            <xctk:ColorPicker Grid.Row="2" Grid.Column="1" Width="60"
+                Name="ColorHFRNormalTrack" />
             <TextBlock Grid.Row="2" Grid.Column="2" Text="Normal Tracking" />
 
-            <xctk:ColorPicker Grid.Row="3" Grid.Column="0" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorHFRElder" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
-            <xctk:ColorPicker Grid.Row="3" Grid.Column="1" Width="60" StandardColors="{Binding ColorList}"
-                Name="ColorHFRElderTrack" ColorMode="ColorCanvas" ShowDropDownButton="False" ShowStandardColors="False" ShowTabHeaders="False" UsingAlphaChannel="False" />
+            <xctk:ColorPicker Grid.Row="3" Grid.Column="0" Width="60"
+                Name="ColorHFRElder" />
+            <xctk:ColorPicker Grid.Row="3" Grid.Column="1" Width="60"
+                Name="ColorHFRElderTrack"/>
             <TextBlock Grid.Row="3" Grid.Column="2" Text="Elder and Tempered Tracking" />
 
             <Button Grid.Row="5" Grid.ColumnSpan="2" Width="150" Height="50" Content="Open" Name="LoadFile" />
