@@ -83,7 +83,7 @@ namespace SFcustom
                 OpacitySlider.Value = raw[223];
 
                 ColorHFRNormal.SelectedColor = Color.FromRgb(raw[220], raw[221], raw[222]);
-                ColorHFRNormalTrack.SelectedColor = Color.FromRgb(raw[240], raw[241], raw[242]);
+                ColorHFRNormalTrack.SelectedColor = Color.FromRgb(raw[260], raw[261], raw[262]);
 
                 ColorHFRElder.SelectedColor = Color.FromRgb(raw[232], raw[233], raw[234]);
                 ColorHFRElderTrack.SelectedColor = Color.FromRgb(raw[244], raw[245], raw[246]);
