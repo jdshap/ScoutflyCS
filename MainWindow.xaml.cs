@@ -109,11 +109,11 @@ namespace SFcustom
 
                 OpacitySlider.Value = raw[223];
 
-                ColorHFRNormal.SelectedColor = Color.FromRgb(raw[220], raw[221], raw[222]);
+                ColorHFRNormal.SelectedColor = Color.FromRgb(raw[252], raw[253], raw[254]);
                 ColorHFRNormalTrack.SelectedColor = Color.FromRgb(raw[260], raw[261], raw[262]);
 
-                ColorHFRElder.SelectedColor = Color.FromRgb(raw[232], raw[233], raw[234]);
-                ColorHFRElderTrack.SelectedColor = Color.FromRgb(raw[244], raw[245], raw[246]);
+                ColorHFRElder.SelectedColor = Color.FromRgb(raw[256], raw[257], raw[258]);
+                ColorHFRElderTrack.SelectedColor = Color.FromRgb(raw[264], raw[265], raw[266]);
 
                 SysOut.Text = "File loaded successfully!";
             }
